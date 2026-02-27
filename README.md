@@ -2,4 +2,4 @@
 
 UI App
 
-![bstore](Images/cover 2.png)
+![bstore](Images/Cover.png)
