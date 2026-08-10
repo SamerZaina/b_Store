@@ -32,9 +32,10 @@ class MostSellingCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 200,
-      width: 140,
+      // was 140 wide holding 200-wide children, and 200 tall holding ~224 of content
+      width: 200,
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
