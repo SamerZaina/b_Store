@@ -39,7 +39,8 @@ class ProductList extends StatelessWidget {
                   child: Image.asset(_imagePath,
                     fit: BoxFit.contain,),),
               ),
-              Column(
+              Expanded(
+                child: Column(
 
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -81,8 +82,12 @@ class ProductList extends StatelessWidget {
                       ),
 
                       child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           IconButton(
+                            // default 48px tap targets don't fit a 106px-wide box
+                            padding: EdgeInsets.zero,
+                            constraints: const BoxConstraints(),
                             onPressed: (){},
                             icon: const Icon(Icons.add,size: 15,),
                             color: const Color(0Xff586BCA),
@@ -96,6 +101,8 @@ class ProductList extends StatelessWidget {
                             ),),
 
                           IconButton(
+                              padding: EdgeInsets.zero,
+                              constraints: const BoxConstraints(),
                               onPressed: (){},
                               icon: const Icon(Icons.remove,size: 18,
                                 color: Color(0Xff586BCA),)
@@ -107,6 +114,7 @@ class ProductList extends StatelessWidget {
 
 
                 ],
+              ),
               ),
 
 
